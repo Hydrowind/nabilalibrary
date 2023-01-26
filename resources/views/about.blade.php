@@ -8,10 +8,17 @@
     <div class="section-title">
       <h2>ABOUT</h2>
     </div>
-    <div class="col-lg-6">
+      <div class="col-lg-6">
         <img src="/images/about.png" class="img-fluid" alt="">
+        <img src="/images/about2.png" class="img-fluid mt-2" alt="">
       </div>
       <div class="col-lg-6 pt-4 pt-lg-0">
+        <h3 style="color: blue;">KAMI ADALAH</h3>
+        <h4>Perpustakaan Yayasan Perguruan Ksatrya Lima Satu</h4>
+        <p>
+          Berada di lingkungan Yayasan Perguruan Ksatrya Lima Satu yang beralamat di Jl. Percetakan Negara No.D232, Jakarta Pusat, DKI Jakarta. Gedung Perpustakaan terletak di lantai 2, diatas Ruang Guru, UKS, dan Kesiswaan. Gedung ini bersebelahan dengan Lab. komputer. Perpustakaan Yayasan Perguruan Ksatrya Lima Satu memiliki Luas gedung 16m x 8m. Perpustakaan dilengkapi dengan sarana dan prasarana yang memadai. Sebagai penunjang kegiatan pembelajaran di sekolah. Sarana prasarana di perpustakaan diantaranya sebagai berikut, a) LCD Proyektor, Televisi (TV), Komputer dan Wifi.
+        </p>
+
         <h3>VISI :</h3>
         <p class="fst-italic">
           Terwujudnya siswa yang unggul dalam bidang akademik, nn akademik, jujur, disiplin dan berakhlak mulia
@@ -27,6 +34,8 @@
         <p>
           Unggul dalam Prestasi, Santun dalam Bertindak, Professional dalam Pelayanan.
         </p>
+
+        
       </div>
     </div>
 

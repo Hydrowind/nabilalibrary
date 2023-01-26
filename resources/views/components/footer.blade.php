@@ -14,13 +14,13 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="footer-top">
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-links">
+          <!-- <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
@@ -40,34 +40,34 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
             </ul>
-          </div>
+          </div> -->
 
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
-
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-info">
-            <h3>About Moderna</h3>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
-            <div class="social-links mt-3">
+          <div class="col-lg-4 col-md-6 footer-info">
+            <div class="logo">
+              <a href="/"><img src="/images/logo.png" alt="" class="img-fluid"></a>
+            </div>
+            <br>
+            <p>Motto SMA Yayasan Perguruan Ksatrya Lima Satu adalah Unggul dalam Prestasi, Santun dalam Bertindak, Professional dalam Pelayanan</p>
+            <!-- <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
               <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
               <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div>
+            </div> -->
+          </div>
+
+          <div class="col-lg-4"></div>
+
+          <div class="col-lg-4 col-md-6 footer-contact">
+            <h4>Contact Info</h4>
+            <p><i class="bx bx-map"></i> Jl. Percetakan Negara No.D232, Jakarta Pusat, DKI Jakarta</p>
+            <p><i class="bx bx-phone"></i> (021) 425 6689</p>
+            <p><i class="bx bx-envelope"></i> adminsma@yayasanksatrya.or.id</p>
           </div>
 
         </div>
       </div>
-    </div> -->
+    </div>
 
     <div class="container">
       <div class="copyright">

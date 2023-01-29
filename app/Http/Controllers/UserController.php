@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 
@@ -15,8 +16,25 @@ class UserController extends Controller
      */
     public function index()
     {
-        $data = User::all();
-        return view('pages.getall', ['data' => $data, 'routeGroup' => 'users']);
+        if(Route::is('users.student')){
+            $data = User::all()->where('role', '2');
+        } else if(Route::is('users.librarians')){
+            $data = User::all()->where('role', '1');
+        } else {
+            $data = User::all();
+        }
+        return view('pages.user.index', ['data' => $data]);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getAllWithRole($role)
+    {
+        $data = User::all()->where('role', $role);
+        return view('pages.user.index', ['data' => $data]);
     }
 
     /**

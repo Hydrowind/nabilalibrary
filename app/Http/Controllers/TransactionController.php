@@ -17,7 +17,7 @@ class TransactionController extends Controller
     public function index()
     {
         $data = Transaction::all();
-        return view('pages.getall', ['data' => $data, 'routeGroup' => 'transactions']);
+        return view('pages.transaction.index', ['data' => $data]);
     }
 
     /**
@@ -43,7 +43,7 @@ class TransactionController extends Controller
     {
         $data = Transaction::create([
             'type' => $request->type,
-            'date' => $request->date,
+            'date' => \Carbon\Carbon::now(),
             'user_id' => $request->user_id,
             'book_id' => $request->book_id,
         ]);
@@ -92,10 +92,11 @@ class TransactionController extends Controller
     {
         $data = Transaction::find($id);
 
-        $data->type = $request->type;
-        $data->date = $request->date;
-        $data->user_id = $request->user_id;
-        $data->book_id = $request->book_id;
+        $data->type = 'pengembalian';
+        // $data->date = $request->date;
+        $data->return_date = \Carbon\Carbon::now();
+        // $data->user_id = $request->user_id;
+        // $data->book_id = $request->book_id;
 
         if($data->save()){
             return redirect()->route('transactions.index');

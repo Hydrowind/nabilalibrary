@@ -16,19 +16,20 @@
                         <select name="type" id="type" class="form-control" placeholder="Type" required>
                             <option value="peminjaman">Peminjaman</option>
                             <option value="pengembalian">Pengembalian</option>
-                            <option value="kehadiran" selected>Kehadiran</option>
                         </select>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                     <label for="date">Date</label>
                         <input type="date" class="form-control" id="date"
                             placeholder="Masukkan Tanggal" name="date" required>
-                    </div>
+                    </div> -->
                     <div class="form-group">
                         <label for="book_id">Buku</label>
                         <select name="book_id" id="book_id" class="form-control" placeholder="Book" required>
                             @foreach($books as $book)
-                                <option value="{{ $book->id }}">{{ $book->title }}</option>
+                                @if($book->quantity > 0)
+                                    <option value="{{ $book->id }}">{{ $book->title }}</option>
+                                @endif
                             @endforeach
                         </select>
                     </div>
@@ -36,7 +37,9 @@
                         <label for="user_id">User</label>
                         <select name="user_id" id="user_id" class="form-control" placeholder="User" required>
                             @foreach($users as $user)
-                                <option value="{{ $user->id }}">{{ $user->name }}</option>
+                                @if($user->role == 2)
+                                    <option value="{{ $user->id }}">{{ $user->name }}</option>
+                                @endif
                             @endforeach
                         </select>
                     </div>

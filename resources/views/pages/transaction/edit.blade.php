@@ -6,26 +6,25 @@
     <div class="card-body">
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h2 class="m-0 font-weight-bold text-primary"><i class="fas fa-house-user"></i> Buat Data Baru</h2>
+                <h2 class="m-0 font-weight-bold text-primary"><i class="fas fa-house-user"></i> Edit Data Baru</h2>
             </div>
             <div class="card-body">
             <form class="user" method="post" action="{{ route('transactions.update', $data->id) }}">
                     @method('put')
                     @csrf
                     <div class="form-group">
-                        <label for="type">Type</label>
+                        <label for="type">Status</label>
                         <select name="type" id="type" class="form-control" placeholder="Type" required>
                             <option value="peminjaman" @if($data->type == "peminjaman") selected @endif>Peminjaman</option>
                             <option value="pengembalian" @if($data->type == "pengembalian") selected @endif>Pengembalian</option>
-                            <option value="kehadiran" @if($data->type == "kehadiran") selected @endif>Kehadiran</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                    <label for="date">Date</label>
+                    <div class="form-group" style="display: none;">
+                        <label for="date">Date</label>
                         <input type="date" class="form-control" id="date"
                             placeholder="Masukkan Tanggal" name="date" value="{{ $data->date }}" required>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" style="display: none;">
                         <label for="book_id">Buku</label>
                         <select name="book_id" id="book_id" class="form-control" placeholder="Book" required>
                             @foreach($books as $book)
@@ -33,7 +32,7 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" style="display: none;">
                         <label for="user_id">User</label>
                         <select name="user_id" id="user_id" class="form-control" placeholder="User" required>
                             @foreach($users as $user)

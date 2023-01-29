@@ -6,7 +6,6 @@
   if($data->first()){
     $attributes  = array_keys($data->first()->toArray());
   }
-
 @endphp
 <!-- DataTales Example -->
 <div class="content-box-large">

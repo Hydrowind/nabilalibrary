@@ -12,19 +12,19 @@
             <select name="month" id="monthFilter" class="btn dropdown-toggle">
                 <option value="">All</option>
                 @foreach($months as $i => $month)
-                    <option value="{{$i+1}}" {{ $_GET['month'] == $i+1 ? "selected" : "" }}>{{ $month }}</option>
+                    <option value="{{$i+1}}" {{ isset($_GET['month']) && $_GET['month'] == $i+1 ? "selected" : "" }}>{{ $month }}</option>
                 @endforeach
             </select>
             
             <select name="year" id="yearFilter" class="btn dropdown-toggle">
                 <option value="">All</option>
                 @for($year = 2010 ; $year <= 2023 ; $year++)
-                    <option value="{{$year}}" {{ $_GET['year'] == $year ? "selected" : "" }}>{{ $year }}</option>
+                    <option value="{{$year}}" {{ isset($_GET['year']) && $_GET['year'] == $year ? "selected" : "" }}>{{ $year }}</option>
                 @endfor
             </select>
             
             <input class="btn btn-primary" type="submit" name="action" value="Submit" />
-            <input class="btn btn-danger" type="submit" name="action" value="Export PDF" />
+            <!-- <input class="btn btn-danger" type="submit" name="action" value="Export PDF" /> -->
 
         </form> 
 

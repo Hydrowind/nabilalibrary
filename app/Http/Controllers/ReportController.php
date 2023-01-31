@@ -7,7 +7,7 @@ use App\Models\User;
 use App\Models\Book;
 use Illuminate\Http\Request;
 use \Carbon\Carbon;
-use PDF;
+// use PDF;
 
 class ReportController extends Controller
 {
@@ -37,7 +37,8 @@ class ReportController extends Controller
 
         switch($request->action){
             case "Submit": return view('report', ['data' => $data]);
-            case "Export PDF": return PDF::loadView('export', ['data' => $data])->download();
+            default: return view('report', ['data' => $data]);
+            // case "Export PDF": return PDF::loadView('export', ['data' => $data])->download();
         }
     }
 }

@@ -34,12 +34,10 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="user_id">User</label>
-                        <select name="user_id" id="user_id" class="form-control" placeholder="User" required>
-                            @foreach($users as $user)
-                                @if($user->role == 2)
-                                    <option value="{{ $user->id }}">{{ $user->name }}</option>
-                                @endif
+                        <label for="student_id">Siswa</label>
+                        <select name="student_id" id="student_id" class="form-control" placeholder="Siswa" required>
+                            @foreach($students as $student)
+                                <option value="{{ $student->id }}">{{ $student->fullname }}</option>
                             @endforeach
                         </select>
                     </div>

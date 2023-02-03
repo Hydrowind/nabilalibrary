@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string("type");
             $table->date("date");
-            $table->foreignId("user_id");
+            $table->date("return_date")->nullable();
+            $table->foreignId("student_id");
             $table->foreignId("book_id");
             $table->timestamps();
         });

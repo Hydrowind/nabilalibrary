@@ -45,7 +45,7 @@
                 @foreach ($data as $d)
                 <tr>
                     <td>{{$d->id}}</td>
-                    <td>{{$d->user->name}}</td>
+                    <td>{{$d->student->fullname}}</td>
                     <td>{{$d->date}}</td>
                     <td>{{$d->return_date}}</td>
                     <td>{{$d->book->title}}</td>

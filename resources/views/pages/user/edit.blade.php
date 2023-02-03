@@ -27,7 +27,6 @@
                         <select name="role" id="role" class="form-control" placeholder="Role" required>
                             <option value="0" @if($data->role == 0) selected @endif>SuperAdmin</option>
                             <option value="1" @if($data->role == 1) selected @endif>Pustakawan</option>
-                            <option value="2" @if($data->role == 2) selected @endif>Anggota</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-primary btn-user btn-block">

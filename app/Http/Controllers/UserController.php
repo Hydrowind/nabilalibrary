@@ -16,14 +16,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        if(Route::is('users.student')){
-            $data = User::all()->where('role', '2');
-        } else if(Route::is('users.librarians')){
-            $data = User::all()->where('role', '1');
-        } else {
-            $data = User::all();
-        }
-        return view('pages.user.index', ['data' => $data]);
+        return view('pages.user.index', ['data' => User::all()]);
     }
 
     /**

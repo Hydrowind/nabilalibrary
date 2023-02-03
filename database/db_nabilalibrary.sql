@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 29, 2023 at 05:44 AM
+-- Generation Time: Feb 02, 2023 at 03:29 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -47,9 +47,9 @@ CREATE TABLE `books` (
 --
 
 INSERT INTO `books` (`id`, `title`, `year`, `author`, `publisher`, `page`, `category`, `quantity`, `coverUrl`, `description`, `created_at`, `updated_at`) VALUES
-('9796650096', 'BELAJAR SAINS DENGAN BAHAN MAKANAN SEHARI-HARI', 1996, 'MURIEL MANDELL', 'PENERBIT ANGKASA BANDUNG', 120, 'sains', 9, 'https://res.cloudinary.com/hydrowind/image/upload/v1672441696/nabilalibrary/book1_jrvtpa.png', 'viii + 120hlm', '2022-12-30 16:50:08', '2022-12-30 16:50:08'),
-('9797570339', 'Rangkuman Rumus Matematika, Fisika & Kimia SMA', 2005, 'Redaksi Kawan Pustaka', 'KAWAN PUSTAKA', 282, 'sains', 3, 'https://res.cloudinary.com/hydrowind/image/upload/v1672441696/nabilalibrary/book2_ks3rl6.png', 'VI, 282hlm, 19cm', '2022-12-30 16:50:08', '2022-12-30 16:50:08'),
-('9797571162', 'Rumus Lengkap Fisika SMA', 2010, 'Drs. JOKO UNTORO', 'PT WAHYUMEDIA', 264, 'sains', 1, 'https://res.cloudinary.com/hydrowind/image/upload/v1672441692/nabilalibrary/book3_sf8y6g.png', '264hlm, 19cm', '2022-12-30 16:50:08', '2022-12-30 16:50:08');
+('9796650096', 'BELAJAR SAINS DENGAN BAHAN MAKANAN SEHARI-HARI', 1996, 'MURIEL MANDELL', 'PENERBIT ANGKASA BANDUNG', 120, 'sains', 1, 'https://res.cloudinary.com/hydrowind/image/upload/v1672441696/nabilalibrary/book1_jrvtpa.png', 'viii + 120hlm', '2023-01-31 02:59:55', '2023-01-31 02:59:55'),
+('9797570339', 'Rangkuman Rumus Matematika, Fisika & Kimia SMA', 2005, 'Redaksi Kawan Pustaka', 'KAWAN PUSTAKA', 282, 'sains', 1, 'https://res.cloudinary.com/hydrowind/image/upload/v1672441696/nabilalibrary/book2_ks3rl6.png', 'VI, 282hlm, 19cm', '2023-01-31 02:59:55', '2023-01-31 02:59:55'),
+('9797571162', 'Rumus Lengkap Fisika SMA', 2010, 'Drs. JOKO UNTORO', 'PT WAHYUMEDIA', 264, 'sains', 1, 'https://res.cloudinary.com/hydrowind/image/upload/v1672441692/nabilalibrary/book3_sf8y6g.png', '264hlm, 19cm', '2023-01-31 02:59:55', '2023-01-31 02:59:55');
 
 -- --------------------------------------------------------
 
@@ -97,13 +97,14 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(57, '2014_10_12_000000_create_users_table', 1),
-(58, '2014_10_12_100000_create_password_resets_table', 1),
-(59, '2019_08_19_000000_create_failed_jobs_table', 1),
-(60, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(61, '2022_11_09_235332_create_categories_table', 1),
-(62, '2022_11_24_235703_create_books_table', 1),
-(63, '2022_11_26_044635_create_transactions_table', 1);
+(88, '2014_10_12_000000_create_users_table', 1),
+(89, '2014_10_12_100000_create_password_resets_table', 1),
+(90, '2019_08_19_000000_create_failed_jobs_table', 1),
+(91, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(92, '2022_11_09_235332_create_categories_table', 1),
+(93, '2022_11_24_235703_create_books_table', 1),
+(94, '2022_11_26_044635_create_transactions_table', 1),
+(95, '2023_01_31_084124_create_students_table', 1);
 
 -- --------------------------------------------------------
 
@@ -139,6 +140,29 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `students`
+--
+
+CREATE TABLE `students` (
+  `id` char(16) NOT NULL,
+  `fullname` varchar(255) NOT NULL,
+  `class` varchar(255) NOT NULL,
+  `phone_number` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `students`
+--
+
+INSERT INTO `students` (`id`, `fullname`, `class`, `phone_number`) VALUES
+('151524992', 'Ayunda Maudi', 'XI MIA 2', '084625146642'),
+('657756444', 'Coki Pardede', 'XII IPS 2', '087655618754'),
+('746251662', 'Herdhi Sandra', 'XI MIA 5', '087465157742'),
+('847261662', 'Daru Japa', 'XII IPS 1', '084166288812');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `transactions`
 --
 
@@ -147,7 +171,7 @@ CREATE TABLE `transactions` (
   `type` varchar(255) NOT NULL,
   `date` date NOT NULL,
   `return_date` date DEFAULT NULL,
-  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `student_id` bigint(20) UNSIGNED NOT NULL,
   `book_id` bigint(20) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -157,15 +181,8 @@ CREATE TABLE `transactions` (
 -- Dumping data for table `transactions`
 --
 
-INSERT INTO `transactions` (`id`, `type`, `date`, `return_date`, `user_id`, `book_id`, `created_at`, `updated_at`) VALUES
-(1, 'pengembalian', '2023-01-14', '2023-01-29', 5, 9796650096, '2023-01-14 01:03:18', '2023-01-28 17:52:54'),
-(2, 'pengembalian', '2023-01-17', '2023-01-27', 4, 9796650096, '2023-01-17 07:43:03', '2023-01-28 17:41:14'),
-(3, 'pengembalian', '2022-01-17', '2023-01-24', 4, 9796650096, '2023-01-17 08:13:44', '2023-01-28 17:40:11'),
-(5, 'pengembalian', '2023-01-29', '2023-01-29', 4, 9797570339, '2023-01-28 17:27:05', '2023-01-28 17:39:12'),
-(6, 'pengembalian', '2023-01-29', '2023-01-29', 4, 9796650096, '2023-01-28 17:43:33', '2023-01-28 18:02:02'),
-(9, 'pengembalian', '2023-01-29', '2023-01-29', 5, 9796650096, '2023-01-28 17:48:48', '2023-01-28 17:52:13'),
-(10, 'peminjaman', '2023-01-29', NULL, 6, 9796650096, '2023-01-28 17:49:02', '2023-01-28 17:49:02'),
-(11, 'peminjaman', '2023-01-29', NULL, 4, 9796650096, '2023-01-28 17:52:40', '2023-01-28 17:52:40');
+INSERT INTO `transactions` (`id`, `type`, `date`, `return_date`, `student_id`, `book_id`, `created_at`, `updated_at`) VALUES
+(1, 'pengembalian', '2023-02-01', '2023-02-01', 151524992, 9796650096, '2023-02-01 06:32:39', '2023-02-01 06:33:09');
 
 --
 -- Triggers `transactions`
@@ -215,12 +232,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `role`, `photoUrl`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'SuperAdmin', 'superadmin@email.com', '2022-12-30 16:50:08', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, NULL, NULL, '2022-12-30 16:50:08', '2022-12-30 16:50:08'),
-(2, 'Admin', 'admin@email.com', '2022-12-30 16:50:08', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 1, NULL, NULL, '2022-12-30 16:50:08', '2022-12-30 16:50:08'),
-(3, 'Nabila', 'nabila@email.com', '2022-12-30 16:50:08', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 1, NULL, NULL, '2022-12-30 16:50:08', '2022-12-30 16:50:08'),
-(4, 'Ayunda', 'ayunda@email.com', '2022-12-30 16:50:08', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 2, NULL, NULL, '2022-12-30 16:50:08', '2022-12-30 16:50:08'),
-(5, 'Herdhi', 'herdhi@email.com', '2022-12-30 16:50:08', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 2, NULL, NULL, '2022-12-30 16:50:08', '2022-12-30 16:50:08'),
-(6, 'Daru', 'daru@email.com', '2022-12-30 16:50:08', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 2, NULL, NULL, '2022-12-30 16:50:08', '2022-12-30 16:50:08');
+(1, 'SuperAdmin', 'superadmin@email.com', '2023-01-31 02:59:55', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, NULL, NULL, '2023-01-31 02:59:55', '2023-01-31 02:59:55'),
+(2, 'Admin', 'admin@email.com', '2023-01-31 02:59:55', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 1, NULL, NULL, '2023-01-31 02:59:55', '2023-01-31 02:59:55'),
+(3, 'Nabila', 'nabila@email.com', '2023-01-31 02:59:55', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 1, NULL, NULL, '2023-01-31 02:59:55', '2023-01-31 02:59:55');
 
 --
 -- Indexes for dumped tables
@@ -266,6 +280,12 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
+-- Indexes for table `students`
+--
+ALTER TABLE `students`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `transactions`
 --
 ALTER TABLE `transactions`
@@ -298,7 +318,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -310,13 +330,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

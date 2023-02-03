@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\ReportController;
 
 /*
@@ -37,15 +38,14 @@ Route::controller(AuthController::class)->group(function() {
 
 Route::group(['prefix' => 'admin', 'middleware' => ['admin']], function(){
     Route::view('/dashboard', 'dashboard')->name('dashboard');
-    Route::get('report', [ReportController::class, 'index'])->name('report');
-    Route::get('export', [ReportController::class, 'exportPDF'])->name('export');
+    Route::get('report', [ReportController::class, 'index'])->middleware('superadmin')->name('report');
+    Route::get('export', [ReportController::class, 'exportPDF'])->middleware('superadmin')->name('export');
     Route::resources([
         'books'         => BookController::class,
         'transactions'  => TransactionController::class,
-        'users'         => UserController::class
+        'students'      => StudentController::class,
     ]);
-    Route::get('students', [UserController::class, 'index'])->name('users.student');
-    Route::get('librarians', [UserController::class, 'index'])->name('users.librarians');
+    Route::resource('users', UserController::class)->middleware('superadmin');
 });
 
 Route::post('borrow', [HomeController::class, 'borrow'])->name('borrow');

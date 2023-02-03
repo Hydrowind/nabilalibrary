@@ -30,20 +30,5 @@ class UserSeeder extends Seeder
             'email' => 'nabila@email.com',
             'role' => 1,
         ]);
-        User::factory()->create([
-            'name' => 'Ayunda',
-            'email' => 'ayunda@email.com',
-            'role' => 2,
-        ]);
-        User::factory()->create([
-            'name' => 'Herdhi',
-            'email' => 'herdhi@email.com',
-            'role' => 2,
-        ]);
-        User::factory()->create([
-            'name' => 'Daru',
-            'email' => 'daru@email.com',
-            'role' => 2,
-        ]);
     }
 }

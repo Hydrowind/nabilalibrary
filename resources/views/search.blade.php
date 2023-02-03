@@ -45,16 +45,6 @@
                 <p class="badge rounded-pill bg-info">Sisa Stok Buku : {{ $book->quantity }}</p> <br>
               </div>
             </div>
-            @if( $book->quantity != 0)
-              <form action="{{ route('borrow') }}" method="post">
-                @csrf
-                <input type="hidden" name="user_id" value="{{ Auth::user() ? Auth::user()->id : ""}}">
-                <input type="hidden" name="book_id" value="{{ $book->id }}">
-                <button class="btn btn-primary" style="width: 100%;">Pinjam</button>
-              </form>
-              @endif
-            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a> -->
           </div>
         </div>
       </div>

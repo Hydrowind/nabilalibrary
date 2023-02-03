@@ -33,10 +33,10 @@
                         </select>
                     </div>
                     <div class="form-group" style="display: none;">
-                        <label for="user_id">User</label>
-                        <select name="user_id" id="user_id" class="form-control" placeholder="User" required>
-                            @foreach($users as $user)
-                                <option value="{{ $user->id }}" @if($data->user_id == $user->id) selected @endif>{{ $user->name }}</option>
+                        <label for="student_id">Siswa</label>
+                        <select name="student_id" id="student_id" class="form-control" placeholder="Siswa" required>
+                            @foreach($students as $student)
+                                <option value="{{ $student->id }}" @if($data->student_id == $student->id) selected @endif>{{ $student->fullname }}</option>
                             @endforeach
                         </select>
                     </div>

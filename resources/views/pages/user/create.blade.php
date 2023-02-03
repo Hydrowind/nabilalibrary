@@ -22,11 +22,6 @@
                             placeholder="Masukkan Email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="text" class="form-control" id="phone"
-                            placeholder="Enter Phone Number" name="phone" required>
-                    </div>
-                    <div class="form-group">
                         <label for="password">Kata Sandi</label>
                         <input type="password" class="form-control"
                             id="password" placeholder="Masukkan Kata Sandi" name="password" required>
@@ -36,7 +31,6 @@
                         <select name="role" id="role" class="form-control" placeholder="Role" required>
                             <option value="0">SuperAdmin</option>
                             <option value="1">Pustakawan</option>
-                            <option value="2" selected>Anggota</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-primary btn-user btn-block">

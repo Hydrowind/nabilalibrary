@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Transaction;
-use App\Models\User;
+use App\Models\Student;
 use App\Models\Book;
 use Illuminate\Http\Request;
 
@@ -28,7 +28,7 @@ class TransactionController extends Controller
     public function create()
     {
         return view('pages.transaction.create', [
-            'users' => User::all(),
+            'students' => Student::all(),
             'books' => Book::all(),
         ]);
     }
@@ -44,7 +44,7 @@ class TransactionController extends Controller
         $data = Transaction::create([
             'type' => $request->type,
             'date' => \Carbon\Carbon::now(),
-            'user_id' => $request->user_id,
+            'student_id' => $request->student_id,
             'book_id' => $request->book_id,
         ]);
 
@@ -76,7 +76,7 @@ class TransactionController extends Controller
     {
         return view('pages.transaction.edit', [
             'data'  => Transaction::find($id),
-            'users' => User::all(),
+            'students' => Student::all(),
             'books' => Book::all(),
         ]);
     }

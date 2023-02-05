@@ -4,7 +4,7 @@
 	<div class="col-md-6">
 		<div class="content-box-large">
 			<div class="panel-heading">
-			<div class="panel-title">Selamat Datang di Dashboard</div>
+			<div class="panel-title">Selamat Datang</div>
 			
 			<div class="panel-options">
 				<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>

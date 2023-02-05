@@ -37,7 +37,7 @@ Route::controller(AuthController::class)->group(function() {
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => ['admin']], function(){
-    Route::view('/dashboard', 'dashboard')->name('dashboard');
+    // Route::view('/dashboard', 'dashboard')->name('dashboard');
     Route::get('report', [ReportController::class, 'index'])->middleware('superadmin')->name('report');
     Route::get('export', [ReportController::class, 'exportPDF'])->middleware('superadmin')->name('export');
     Route::resources([

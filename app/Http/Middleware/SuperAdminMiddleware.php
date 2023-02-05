@@ -18,7 +18,7 @@ class SuperAdminMiddleware
     public function handle(Request $request, Closure $next)
     {
         if(Auth::user()->role != 0)
-            return redirect()->route('dashboard');
+            return redirect()->route('students.index');
         
         return $next($request);
     }

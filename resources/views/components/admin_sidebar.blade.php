@@ -1,7 +1,6 @@
 <div class="sidebar content-box" style="display: block;">
   <ul class="nav">
       <!-- Main menu -->
-      <li class="{{ Route::is('dashboard') ? 'current' : '' }}"><a href="{{ route('dashboard') }}"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
       @if(Auth::user()->role == 0)
       <li class="{{ Route::is('users.index') ? 'current' : '' }}"><a href="{{ route('users.index') }}"><i class="glyphicon glyphicon-user"></i> Pustakawan</a></li>
       @endif

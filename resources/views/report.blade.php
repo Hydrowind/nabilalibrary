@@ -9,15 +9,17 @@
 <div class="content-box-large">
     <div class="panel-body">
         <form action="" method="get">
+            <label for="monthFilter">Pilih Bulan: </label>
             <select name="month" id="monthFilter" class="btn dropdown-toggle">
-                <option value="">All</option>
+                <option value="">Semua</option>
                 @foreach($months as $i => $month)
                     <option value="{{$i+1}}" {{ isset($_GET['month']) && $_GET['month'] == $i+1 ? "selected" : "" }}>{{ $month }}</option>
                 @endforeach
             </select>
             
+            <label for="yearFilter">Pilih Tahun: </label>
             <select name="year" id="yearFilter" class="btn dropdown-toggle">
-                <option value="">All</option>
+                <option value="">Semua</option>
                 @for($year = 2010 ; $year <= 2023 ; $year++)
                     <option value="{{$year}}" {{ isset($_GET['year']) && $_GET['year'] == $year ? "selected" : "" }}>{{ $year }}</option>
                 @endfor

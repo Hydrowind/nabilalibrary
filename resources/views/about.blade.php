@@ -6,7 +6,7 @@
 
     <div class="row">
       <div class="section-title">
-        <h2>ABOUT</h2>
+        <h2>Tentang Kami</h2>
       </div>
       <div class="col-lg-6">
           <img src="/images/about.png" class="img-fluid mb-2" alt="">

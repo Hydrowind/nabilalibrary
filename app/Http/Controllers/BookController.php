@@ -14,8 +14,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        $data = Book::all();
-        return view('pages.getall', ['data' => $data, 'routeGroup' => 'books']);
+        return view('pages.book.index', ['data' => Book::all()]);
     }
 
     /**

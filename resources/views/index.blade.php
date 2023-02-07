@@ -54,7 +54,7 @@
         <div class="icon-box icon-box-pink">
           <div class="icon"><i class="bx bxl-dribbble"></i></div>
           <h4 class="title"><a href="">Pengetahuan Alam</a></h4>
-          <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+          <p class="description">Ilmu pengetahuan yang mempelajari gejala-gejala melalui serangkaian proses yang dikenal dengan proses ilmiah.</p>
         </div>
       </div>
 
@@ -62,7 +62,7 @@
         <div class="icon-box icon-box-cyan">
           <div class="icon"><i class="bx bx-file"></i></div>
           <h4 class="title"><a href="">Pengetahuan Umum</a></h4>
-          <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+          <p class="description">Suatu pengetahuan tentang objek tertentu yang disusun secara sistematis objektif rasional dan empiris sebagai hasil.</p>
         </div>
       </div>
 
@@ -70,7 +70,7 @@
         <div class="icon-box icon-box-green">
           <div class="icon"><i class="bx bx-tachometer"></i></div>
           <h4 class="title"><a href="">Pengetahuan Sosial</a></h4>
-          <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <p class="description">Suatu kajian disiplin akademis yang mempelajari aspek-aspek yang berhubungan dengan manusia dan lingkungan sosialnya.</p>
         </div>
       </div>
 
@@ -78,7 +78,7 @@
         <div class="icon-box icon-box-blue">
           <div class="icon"><i class="bx bx-world"></i></div>
           <h4 class="title"><a href="">Bahasa & Sastra</a></h4>
-          <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+          <p class="description">Antara Bahasa & sastra merupakan dua bidang yang tidak terpisahkan. Bahasa sebagai sistem tanda primer dan sastra sebagai sistem tanda sekunder.</p>
         </div>
       </div>
 

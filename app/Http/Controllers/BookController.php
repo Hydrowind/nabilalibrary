@@ -36,13 +36,15 @@ class BookController extends Controller
     public function store(Request $request)
     {
         $data = Book::create([
+            'id' => $request->id,
             'title' => $request->title,
             'year' => $request->year,
             'author' => $request->author,
+            'publisher' => $request->publisher,
             'page' => $request->page,
             'category' => $request->category,
             'quantity' => $request->quantity,
-            'coverUrl' => $request->coverUrl,
+            'coverUrl' => $request->cover_url,
         ]);
 
         if($data->save()){
@@ -89,10 +91,11 @@ class BookController extends Controller
         $data->title = $request->title;
         $data->year = $request->year;
         $data->author = $request->author;
+        $data->publisher = $request->publisher;
         $data->page = $request->page;
         $data->category = $request->category;
         $data->quantity = $request->quantity;
-        $data->coverUrl = $request->coverUrl;
+        $data->coverUrl = $request->cover_url;
 
         if($data->save()){
             return redirect()->route('books.index');

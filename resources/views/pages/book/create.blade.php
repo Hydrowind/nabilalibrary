@@ -13,6 +13,12 @@
                     @csrf
 
                     <div class="form-group">
+                        <label for="id">Kode Buku</label>
+                        <input type="text" class="form-control" id="id"
+                            placeholder="Masukkan Kode Buku" name="id" required>
+                    </div>
+
+                    <div class="form-group">
                         <label for="title">Judul</label>
                         <input type="text" class="form-control" id="title"
                             placeholder="Masukkan Judul" name="title" required>
@@ -28,6 +34,12 @@
                         <label for="author">Penulis</label>
                         <input type="text" class="form-control" id="author"
                             placeholder="Masukkan Penulis" name="author" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="publisher">Penerbit</label>
+                        <input type="text" class="form-control" id="publisher"
+                            placeholder="Masukkan Penerbit" name="publisher" required>
                     </div>
 
                     <div class="form-group">

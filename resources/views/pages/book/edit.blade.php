@@ -10,6 +10,7 @@
             </div>
             <div class="card-body">
                 <form class="user" method="post" action="{{ route('books.update', $data->id) }}">
+                    <input type="hidden" name="id" value="{{ $data->id }}">
                     @method('put')
                     @csrf
 
@@ -29,6 +30,12 @@
                         <label for="author">Penulis</label>
                         <input type="text" class="form-control" id="author"
                             placeholder="Masukkan Penulis" name="author" value="{{ $data->author }}" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="publisher">Penerbit</label>
+                        <input type="text" class="form-control" id="publisher"
+                            placeholder="Masukkan Penerbit" name="publisher" value="{{ $data->publisher }}" required>
                     </div>
 
                     <div class="form-group">

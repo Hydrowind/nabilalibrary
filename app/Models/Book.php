@@ -11,6 +11,7 @@ class Book extends Model
     use HasFactory;
 
     protected $fillable = [
+        'id',
         'title',
         'year',
         'author',
@@ -23,7 +24,6 @@ class Book extends Model
     ];
 
     protected $hidden = [
-        'id',
         'created_at',
         'updated_at'
     ];

@@ -36,11 +36,7 @@
                     <td><img src="{{$d->coverUrl}}" alt="Cover" width="120px" height="180px"></td>
                     <td>{{$d->description}}</td>
                     <td>
-                        <form action="{{ route( 'books.update', $d->id) }}" method="post" style="display: inline">
-                        @csrf
-                        @method('PUT')
-                        <button class="btn btn-warning"><i class="glyphicon glyphicon-edit"></i> Edit</button>
-                        </form>
+                        <a href="{{ route('books.edit', $d->id) }}" class="btn btn-warning"><i class="fa fa-edit"></i> Ubah</a>
                         <a class="btn btn-danger" href="#" data-toggle="modal" data-target="{{ '#confirmModal'.$d->id }}">
                             <i class="glyphicon glyphicon-trash"></i> Hapus
                         </a>

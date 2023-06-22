@@ -10,9 +10,19 @@ use Illuminate\Support\Facades\Auth;
 class HomeController extends Controller
 {
     public function search(Request $request){
-        $data = Book::where('title', 'like', '%'.$request->keyword.'%')
-                        ->orWhere('author', 'like', '%'.$request->keyword.'%')->get();
-        return view('search', ['data' => $data]);
+        $categories = Book::get()->unique('category');
+        $data = new Book();
+        
+        if($request->keyword){
+            $data = Book::where('title', 'like', '%'.$request->keyword.'%')
+                            ->orWhere('author', 'like', '%'.$request->keyword.'%');
+        }
+        
+        if($request->category){
+            $data = $data->where('category', 'like', '%'.$request->category.'%');
+        }
+
+        return view('search', ['data' => $data->get(), 'categories' => $categories]);
     }
 
     /**

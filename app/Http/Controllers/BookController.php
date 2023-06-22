@@ -42,7 +42,7 @@ class BookController extends Controller
             'author' => $request->author,
             'publisher' => $request->publisher,
             'page' => $request->page,
-            'category' => $request->category,
+            'category' => strtolower($request->category),
             'quantity' => $request->quantity,
             'coverUrl' => $request->cover_url,
         ]);
@@ -93,7 +93,7 @@ class BookController extends Controller
         $data->author = $request->author;
         $data->publisher = $request->publisher;
         $data->page = $request->page;
-        $data->category = $request->category;
+        $data->category = strtolower($request->category);
         $data->quantity = $request->quantity;
         $data->coverUrl = $request->cover_url;
 

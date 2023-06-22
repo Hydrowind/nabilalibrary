@@ -21,11 +21,16 @@
   </div>
 </section><!-- End About Us Section -->
 
-<!-- ======= About Section ======= -->
+<!-- ======= Book Section ======= -->
 <section class="about" data-aos="fade-up">
   <div class="container">
+    <!-- Category Selector -->
+    <a href="{{ route('search') }}" class="badge p-3 {{ app('request')->input('category') == '' ? 'bg-info' : 'bg-secondary' }}">Semua</a>
+    @foreach($categories as $book)
+    <a href="{{ route('search', ['category' => $book->category]) }}" class="badge p-3 {{ app('request')->input('category') == $book->category ? 'bg-info' : 'bg-secondary' }}">{{ ucfirst($book->category) }}</a>
+    @endforeach
 
-    <div class="row">
+    <div class="row mt-3">
       @if(app('request')->input('keyword') != '')
       <p>Ditemukan <b>{{ count($data) }}</b> buku dari pencarian Anda melalui kata kunci <b> {{ app('request')->input('keyword') }} </b></p>
       @endif
@@ -52,5 +57,5 @@
     </div>
 
   </div>
-</section><!-- End About Section -->
+</section><!-- End Book Section -->
 @endsection

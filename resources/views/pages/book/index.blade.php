@@ -19,6 +19,7 @@
                   <th>Jumlah</th>
                   <th>Cover URL</th>
                   <th>Deskripsi</th>
+                  <th>Sinopsis</th>
                   <th>Aksi</th>
                 </tr>
             </thead>
@@ -35,6 +36,7 @@
                     <td>{{$d->quantity}}</td>
                     <td><img src="{{$d->coverUrl}}" alt="Cover" width="120px" height="180px"></td>
                     <td>{{$d->description}}</td>
+                    <td>{{$d->synopsis}}</td>
                     <td>
                         <a href="{{ route('books.edit', $d->id) }}" class="btn btn-warning"><i class="fa fa-edit"></i> Ubah</a>
                         <a class="btn btn-danger" href="#" data-toggle="modal" data-target="{{ '#confirmModal'.$d->id }}">

@@ -29,6 +29,7 @@ class BookFactory extends Factory
             // 'coverUrl' => $faker->imageUrl(640, 480, 'book', true),
             'coverUrl' => 'https://source.unsplash.com/random/640x480/?bookcover',
             'description' => $faker->text($maxNbChars = 200),
+            'synopsis' => $faker->text($maxNbChars = 500),
         ];
     }
 }

@@ -61,6 +61,18 @@
                         <input type="text" class="form-control" id="cover_url"
                             placeholder="Masukkan URL Halaman Cover" name="cover_url" value="{{ $data->coverUrl }}">
                     </div>
+
+                    <div class="form-group">
+                        <label for="description">Deskripsi</label>
+                        <input type="text" class="form-control" id="description"
+                            placeholder="Masukkan Deskripsi" name="description" value="{{ $data->description }}">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="synopsis">Sinopsis</label>
+                        <input type="text" class="form-control" id="synopsis"
+                            placeholder="Masukkan Sinopsis" name="synopsis" value="{{ $data->synopsis }}">
+                    </div>
                     
                     <button type="submit" class="btn btn-primary btn-user btn-block">
                         Submit

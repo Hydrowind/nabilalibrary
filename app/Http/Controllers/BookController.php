@@ -45,6 +45,8 @@ class BookController extends Controller
             'category' => strtolower($request->category),
             'quantity' => $request->quantity,
             'coverUrl' => $request->cover_url,
+            'description' => $request->description,
+            'synopsis' => $request->synopsis,
         ]);
 
         if($data->save()){
@@ -96,6 +98,8 @@ class BookController extends Controller
         $data->category = strtolower($request->category);
         $data->quantity = $request->quantity;
         $data->coverUrl = $request->cover_url;
+        $data->description = $request->description;
+        $data->synopsis = $request->synopsis;
 
         if($data->save()){
             return redirect()->route('books.index');

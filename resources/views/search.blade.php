@@ -38,17 +38,27 @@
       @foreach($data as $book)
       <div class="col-md-3">
         <div class="card" style="width: 18rem; margin-bottom: 15px;">
-          <img src="{{ $book->coverUrl }}" class="card-img-top" alt="...">
+          <img src="{{ $book->coverUrl }}" class="card-img-top" height="400px" width="300px" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{ $book->title }}</h5>
             <h6 class="card-subtitle mb-2 text-muted">{{ $book->author }} - {{ $book->year}}</h6>
-            <div class="row">
+            <div class="row d-flex flex-row align-items-center">
               <div class="col-md-6">
                 <p class="card-subtitle mb-2 text-muted">{{ $book->page }} Halaman</p>
               </div>
               <div class="col-md-6 text-end align-middle">
                 <p class="badge rounded-pill bg-info">Sisa Stok Buku : {{ $book->quantity }}</p> <br>
               </div>
+            </div>
+            <div class="row">
+              <b>Sinopsis:</b>
+              @if($book->synopsis)
+                <p style="text-align: justify;">
+                  {{ substr($book->synopsis, 0, 240) }}
+                </p>
+              @else
+                -
+              @endif
             </div>
           </div>
         </div>

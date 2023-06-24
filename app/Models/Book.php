@@ -20,7 +20,8 @@ class Book extends Model
         'category',
         'quantity',
         'coverUrl',
-        'description'
+        'description',
+        'synopsis'
     ];
 
     protected $hidden = [

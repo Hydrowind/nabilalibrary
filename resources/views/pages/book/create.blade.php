@@ -59,11 +59,23 @@
                         <input type="number" class="form-control" id="quantity"
                             placeholder="Masukkan Quantity" name="quantity" required>
                     </div>
-
+                    
                     <div class="form-group">
                         <label for="cover_url">Cover URL</label>
                         <input type="text" class="form-control" id="cover_url"
                             placeholder="Masukkan URL Halaman Cover" name="cover_url">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Deskripsi</label>
+                        <input type="text" class="form-control" id="description"
+                            placeholder="Masukkan Deskripsi" name="description">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="synopsis">Sinopsis</label>
+                        <input type="text" class="form-control" id="synopsis"
+                            placeholder="Masukkan Sinopsis" name="synopsis">
                     </div>
                     
                     <button type="submit" class="btn btn-primary btn-user btn-block">

@@ -24,6 +24,7 @@ return new class extends Migration
             $table->integer('quantity');
             $table->string('coverUrl')->nullable();
             $table->string('description')->nullable();
+            $table->text('synopsis')->nullable();
             $table->timestamps();
         });
     }

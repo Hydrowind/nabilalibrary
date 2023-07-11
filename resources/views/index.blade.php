@@ -135,7 +135,7 @@
 </section><!-- End Why Us Section -->
 
 <!-- ======= Features Section ======= -->
-<section class="features">
+<!-- <section class="features">
   <div class="container">
 
     <div class="section-title">
@@ -212,5 +212,6 @@
     </div>
 
   </div>
-</section><!-- End Features Section -->
+</section> -->
+<!-- End Features Section -->
 @endsection

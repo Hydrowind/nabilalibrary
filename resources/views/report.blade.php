@@ -56,6 +56,9 @@
                 @endforeach
             </tbody>
         </table>
+        @if(count($data) == 0)
+        	<p class="text-center">Tidak ada data</p>
+        @endif
     </div>
 </div>
 

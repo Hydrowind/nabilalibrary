@@ -17,24 +17,31 @@
 
         <h3><b>KAMI ADALAH</b></h3>
         <h4>Perpustakaan Yayasan Perguruan Ksatrya Lima Satu</h4>
-        <p>Berada di lingkungan Yayasan Perguruan Ksatrya Lima Satu yang beralamat di Jl. Percetakan Negara No.D232, Jakarta Pusat, DKI Jakarta. Gedung Perpustakaan terletak di lantai 2, diatas Ruang Guru, UKS, dan Kesiswaan. Gedung ini bersebelahan dengan Lab. komputer. Perpustakaan Yayasan Perguruan Ksatrya Lima Satu memiliki Luas gedung 16m x 8m. Perpustakaan dilengkapi dengan sarana dan prasarana yang memadai. Sebagai penunjang kegiatan pembelajaran di sekolah. Sarana prasarana di perpustakaan diantaranya sebagai berikut: LCD Proyektor, Televisi (TV), Komputer dan Wifi.</p>
-
+        <p>Berada di lingkungan Yayasan Perguruan Ksatrya Lima Satu yang beralamat di Jl. Percetakan Negara No. D232, Jakarta Pusat, DKI Jakarta. Gedung Perpustakaan terletak di lantai 2. Gedung ini bersebelahan dengan Ruang Guru SMP dan Masjid Al Furqon. Perpustakaan Yayasan Perguruan Ksatrya Lima Satu memiliki Luas gedung  +/- 14 x 12 meter. Perpustakaan dilengkapi dengan sarana dan prasarana yang memadai dan sangat nyaman. Sebagai penunjang kegiatan pembelajaran di sekolah. Sarana prasarana di perpustakaan diantaranya sebagai berikut: Televisi 40", Komputer dan Wifi.</p>
         <br>
+        
         <h3>VISI :</h3>
         <p class="fst-italic">
-          Terwujudnya siswa yang unggul dalam bidang akademik, nn akademik, jujur, disiplin dan berakhlak mulia
+          Mewujudkan generasi yang berkualitas cerdas dan terampil serta mampu bersikap kreatif menggali ilmu dengan membudayakan baca.
         </p>
+        <br>
+
         <h3>MISI :</h3>
         <ol>
-          <li>Melaksanakan pembelajaran yang aktif,inovatif,kreatif, efektif dan menyenangkan</li>
-          <li>Memfasilitasi pengembangan potensi siswa di bidang akademik dan non akademik</li>
-          <li>Menumbuhkan pribadi yang memiliki karakter jujur, disiplin, dan berakhlak mulia</li>
-          <li>Meningkatkan iman dan taqwa melalui pembiasan keagamaan</li>
+          <li>Membantu kebiasaan belajar siswa dengan baik</li>
+          <li>Meningkatkan kualitas pendidikan di sekolah</li>
+          <li>Membantu memperluas wawasan pengetahuan</li>
+          <li>Mengembangan kepribadian yang berkarakter dan berbudaya</li>
+          <li>Menghadirkan referensi dan informasi pendidikan terkini</li>
+          <li>Menciptakan suasana perpustakaan harmonis yang menyenangkan</li>
+          <li>Meningkatkan minat baca seluruh warga sekolah</li>
+          <li>Memupuk dan mengembangkan minat & bakat siswa dalam membaca</li>
         </ol>
-        <h3>MOTTO :</h3>
+        
+        <!-- <h3>MOTTO :</h3>
         <p>
           Unggul dalam Prestasi, Santun dalam Bertindak, Professional dalam Pelayanan.
-        </p>
+        </p> -->
       </div>
     </div>
 

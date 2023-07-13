@@ -26,7 +26,7 @@
             <ul>
               <li><i class="bx bx-map"></i> <a href="#">Jl. Percetakan Negara No.D232, Jakarta Pusat, DKI Jakarta</a></li>
               <li><i class="bx bx-phone"></i> <a href="#"> (021) 425 6689</a></li>
-              <li><i class="bx bx-envelope"></i> <a href="#"> adminsma@yayasanksatrya.or.id</a></li>
+              <li><i class="bx bx-envelope"></i> <a href="#"> perpustakaanksatrya@gmail.com</a></li>
             </ul>
           </div>
         </div>

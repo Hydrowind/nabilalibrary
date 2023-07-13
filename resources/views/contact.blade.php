@@ -22,7 +22,7 @@
           <br>
 
           <h3><i class="bi bi-envelope-fill"></i> Email</h3>
-          <p>admin@yayasanksatrya.or.id</p>
+          <p>perpustakaanksatrya@gmail.com</p>
           <br>
         </div>
       </div>

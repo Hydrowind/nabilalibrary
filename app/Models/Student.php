@@ -11,6 +11,7 @@ class Student extends Model
     use HasFactory;
 
     public $timestamps = false;
+    public $incrementing = false;
 
     protected $fillable = [
         'id',
